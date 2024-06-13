@@ -1,0 +1,319 @@
+body {
+    background-color: #ccc;
+}
+
+
+.hairy {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), #777), url(../images/hairy.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.hairy h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Lobster;
+
+}
+
+.hairy p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Roboto;
+}
+
+.price-table {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.price-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px 50px;
+    box-shadow: 5px 5px 3px #C0C0C0;
+    transition: transform 0.3s ease;
+}
+
+.price-row:hover {
+    transform: translateY(-10px);
+}
+
+.price-title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.price-amount {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5bb96b;
+}
+
+/* Dye */
+
+.dye {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), #777), url(../images/dye.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.dye h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Lobster;
+
+}
+
+.dye p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Roboto;
+}
+
+/* treatment1 */
+
+.treatment1 {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), #777), url(../images/steam.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.treatment1 h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Lobster;
+
+}
+
+.treatment1 p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Roboto;
+}
+
+.specialist1 {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), #777), url(../images/locs.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.specialist1 h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Lobster;
+
+}
+
+.specialist1 p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Roboto;
+}
+
+.btn3 {
+    align-items: center;
+}
+
+.hero-btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+svg {
+    width: 30px;
+}
+
+nav .icon-cart {
+    position: relative;
+}
+
+nav .icon-cart span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
+/* widget*/
+
+.price-row.selected {
+    background-color: #e31919;
+}
+
+#total-display {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: move;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total1 {
+    font-size: 20px;
+}
+
+
+#book-appointment-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#selected-services {
+    margin-top: 10px;
+    text-align: left;
+    counter-reset: list-counter;
+}
+
+#selected-services li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-family: Roboto;
+}
+
+#selected-services li:before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+
+.content-table {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.total-display-frame {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    max-width: 300px;
+    z-index: -100;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+}
+
+.display-shown.total-display-frame {
+    z-index: 10;
+}
+
+.select {
+    font-size: 40px;
+}
+
+.price-table {
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+.price-title,
+.price-amount {
+    flex: 1;
+}

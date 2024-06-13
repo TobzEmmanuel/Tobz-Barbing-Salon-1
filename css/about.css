@@ -1,0 +1,98 @@
+.sub-header {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(../images/about2.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.sub-header h2 {
+    margin-top: 100px;
+    font-family: Lobster;
+    font-size: 90px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sub-header h1 {
+        font-size: 35px;
+    }
+
+    .banner-btn a {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+#about-us {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 1000;
+    color: #009688;
+    font-size: 50px;
+}
+
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.feature-text p {
+    padding: 0 20px;
+    text-align: initial;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .title-text h2 {
+        font-size: 30px;
+    }
+
+    .features {
+        flex-basis: 100%;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .features-img img {
+        width: 100%;
+    }
+}
+
+strong {
+    font-weight: solid;
+}

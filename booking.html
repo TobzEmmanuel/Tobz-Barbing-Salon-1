@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tobz Barber Shop/Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desription"
+        content="Tobz Barbing Salon, high-quality barbing salon offering professional haircuts and grooming services for men and kids" />
+    <meta name="keywords"
+        content="barbing salon, men's grooming, haircuts, barber shop, hair styling, grooming services, kids haircut, barbing salon" />
+    <meta name="auhor" content="Oluwafemi Oluwatobi Emmanuel" />
+    <meta name="viewpoint" content="width=device-width, initail-scale=1.0" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="Javascript/main.js"></script>
+    <script src="https://kit.fontawesome.com/86bb9e3477.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="backToTopBtn" title="Go to top">&#8593;</button>
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h2>Book An Appointment</h2>
+        <br>
+        <a href="service.html" class="hero-btn btn2">Reselect Serives</a>
+        <script src="Javascript/form.js"></script>
+
+    </section>
+
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+            <form>
+                <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label"> Full Name </label>
+                    <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="phone" class="formbold-form-label"> Phone Number </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
+                        class="formbold-form-input" />
+                </div>
+                <div class="formbold-mb-5">
+                    <label for="email" class="formbold-form-label"> Email Address </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email"
+                        class="formbold-form-input" />
+                </div>
+                <div class="flex flex-wrap formbold--mx-3">
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5 w-full">
+                            <label for="date" class="formbold-form-label"> Date </label>
+                            <input type="date" name="date" id="date" class="formbold-form-input" />
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5">
+                            <label for="time" class="formbold-form-label"> Time </label>
+                            <input type="time" name="time" id="time" class="formbold-form-input" />
+                        </div>
+                    </div>
+                </div>
+                <div id="display-box">
+                    <h2>Selected Services</h2>
+                    <ul id="selected-services-display"></ul>
+                </div>
+                <button type="submit" class="formbold-btn">Book Appointment</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="Javascript/main.js"></script>
+
+    <script>
+        // Function to display stored services
+        function displayStoredServices() {
+            // Retrieve selected services and total from sessionStorage
+            var storedServices = sessionStorage.getItem("selectedServices");
+            var storedTotal = parseFloat(sessionStorage.getItem("total"));
+
+            // Format the total amount with commas after every three digits
+            var formattedTotal = "Total: N" + storedTotal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+            // Display stored services and total in the display box
+            var displayBox = document.getElementById("display-box");
+            displayBox.innerHTML = `<h2>Selected Services</h2><ul id='selected-services-display'>${storedServices}</ul><span>${formattedTotal}</span>`;
+
+            // Get the price amounts and add them to the display box
+            var priceAmounts = document.querySelectorAll(".price-amount");
+            var priceAmountDisplay = document.createElement("div");
+            priceAmountDisplay.className = "price-amount-display";
+
+            priceAmounts.forEach(function (price) {
+                var priceCopy = price.cloneNode(true);
+                priceAmountDisplay.appendChild(priceCopy);
+            });
+
+            displayBox.appendChild(priceAmountDisplay);
+        }
+
+        // Call the displayStoredServices function when the page is loaded
+        window.addEventListener("load", function () {
+            displayStoredServices();
+        });
+
+    </script>
+
+    <!-- Footer -->
+
+    <section id="footer">
+        <img src="images/logo.png" class="footer-img" alt="logo">
+        <div class="title-text">
+            <p>CONTACT</p>
+            <h2>Visit Our Barbershop Today</h2>
+        </div>
+        <div class="footer-row">
+            <div class="footer-left">
+                <h2>Opening Hours</h2>
+                <p><i class="fa fa-clock-o"></i> Monday to Friday - 9am to 9pm </p>
+                <p><i class="fa fa-clock-o"></i> Saturday and Sunday - 8am to 11pm </p>
+            </div>
+            <div class="footer-right">
+                <h2>Get In Touch</h2>
+                <p><i class="fa fa-map-marker"></i> No. 3 Ikorodu, Lagos State, Nigeria</p>
+                <p><i class="fa fa-paper-plane"></i> info@tobzbarbershop.com</p>
+                <p><i class="fa fa-phone"></i> +2348123456789</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
+            <p>
+            <div class="copyright">
+                <p><a href="https://www.tobzcoder.com.ng/"> Copyright &copy; <i class="fa-solid fa-code"></i> Tobz
+                        Coder</a></p>
+            </div>
+            </p>
+        </div>
+    </section>
+
+</body>
+
+</html>
